@@ -14,7 +14,7 @@ import Courses from './Components/Course/Courses'
 import MyAbout from './Components/About/MyAbout'
 
 function App() {
-  
+  const user ='gaurav';
 
   return (
   <>
@@ -38,7 +38,7 @@ function App() {
           </Route> 
         </Routes>
  
-      
+       
       
       </BrowserRouter>
 
