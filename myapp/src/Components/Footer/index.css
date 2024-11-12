@@ -1,0 +1,22 @@
+
+   /* Hover effect for Footer Links */
+   .footer-link {
+    color: #555;
+    display: inline-block; 
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .footer-link:hover {
+    color: #1a73e8; 
+    transform: scale(1.2); 
+  }
+
+.footer-social-link {
+  color: #555;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: #1a73e8; 
+  transform: scale(1.5);
+}

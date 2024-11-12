@@ -1,0 +1,127 @@
+/* Container styling for responsive design */
+.main-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+
+  }
+
+  .btn:hover{
+    transform: scale(1.1);
+  }
+  
+  /* Full-screen modal */
+  .full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .full-screen-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+
+  }
+
+  .close-btn:hover{
+    transform: scale(1.1);
+
+  }
+  
+  /* Responsive text and layout adjustments */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  .link-course{
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .link-course:hover{
+    transform: scale(1.1);
+  }

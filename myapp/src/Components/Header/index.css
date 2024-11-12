@@ -1,0 +1,105 @@
+/* Container */
+.header-container {
+    width: 100%;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Navigation */
+.nav {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 56px;
+}
+
+/* Authentication Links */
+.auth-links .login-link,
+.auth-links .get-started-link {
+    margin-right: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+/* Menu List */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .menu-list {
+        flex-direction: row;
+        margin-top: 0;
+    }
+}
+
+/* Dropdown */
+.projects-dropdown {
+    position: relative;
+}
+
+.projects-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Dropdown appears right below the button */
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    width: 200px;
+    z-index: 10;
+}
+
+/* Show dropdown on hover and focus */
+.projects-dropdown:hover .projects-menu,
+.projects-dropdown:focus-within .projects-menu {
+    display: block;
+}
+
+.project-item .project-link {
+    color: #4a5568;
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-item .project-link:hover {
+    background-color: #f3f4f6;
+}
+
+/* Certificate Link */
+.certificate-link {
+    color: #4a5568;
+    padding: 8px 16px;
+     transition: color 0.3s; 
+
+}
+
+.certificate-link:hover {
+     color: #f97316;  
+     
+}
+
+
+
+    
+
+
+

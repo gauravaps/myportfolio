@@ -1,0 +1,142 @@
+/* Container styling */
+.container {
+   margin-top: 5rem; 
+  width: 100%;
+  max-width: 1200px;
+   padding: 0 5rem;
+  display: flex; /* Side-by-side layout ke liye */
+  align-items: flex-start; /* Align items on top */
+  gap: 5rem;
+}
+
+/* Image container styling */
+.image-container {
+  position: relative; /* Icons ko iske relative rakhne ke liye */
+}
+
+.image-container img {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 400px; /* Restrict to max 400px */
+  border-radius: 10px;
+}
+
+
+/* Text content */
+.text-content {
+  max-width: 40rem;
+  text-align: left;
+}
+
+/* Download button */
+.download-button {
+  display: inline-flex;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  background-color: #ff5722;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  opacity: 0.8;
+} 
+
+/* Footer icons */
+.footers-social {
+  position: relative; /* ya static; */
+  bottom: auto; /* Remove bottom positioning */
+  left: auto; /* Reset left positioning */
+  display: flex;
+  gap: 1rem;
+}
+
+
+.footers-social-link {
+  color: gray;
+  
+  transition: color 0.3s ease, transform 0.2s ease;
+
+}
+
+.footers-social-link:hover {
+  color: #000;
+  transform: scale(1.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column; /* Mobile view me items ko stack karne ke liye */
+      align-items: center;
+  }
+  .footers-social {
+      position: static; /* Static positioning */
+      margin-top: 1rem; /* Space above the icons */
+      justify-content: center; /* Center the icons */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .download-button {
+      padding: 0.5rem 1rem;
+  }
+}
+
+
+
+.heading {
+  font-weight: bold; 
+
+  font-size: 3rem; 
+  color: black;
+  max-width: 48rem; 
+}
+
+/* Medium screen sizes ke liye */
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3rem; 
+    line-height: 1.2; 
+  }
+}
+
+.highlight {
+  color: #06b6d4; /* cyan-500 color code */
+}
+
+.description {
+  margin-top: 1.5rem; /* mt-6 ka equivalent */
+  color: #4b5563; /* gray-600 color code */
+  text-align: left;
+}
+
+
+.images-section img{
+  border-radius: 10px;
+}
+
+
+
+.know-more-button {
+  display: inline-flex;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  background-color: #e64210;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+} 
+
+
+.know-more-button:hover {
+
+  transform: scale(1.1);
+} 
+
+
+
+
