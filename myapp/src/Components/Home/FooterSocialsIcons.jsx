@@ -8,7 +8,7 @@ const FooterSocialsIcons = () => {
   return (
     <div className="foot-container" >
     <div className="footers-social flex mt-4  space-x-4 sm:justify-center sm:mt-2">
-              <Link to="#" className="footers-social-link text-gray-500 hover:text-gray-900">
+              <Link to="#" className="footers-social-link text-gray-500">
                 <svg
                   className="footers-social-icon w-4 h-4"
                   aria-hidden="true"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import amazon from '../Header/amazon2.png';
+import './index.css';
 
 const Header = () => {
     const [activeLink, setActiveLink] = useState(""); // State to track active link
@@ -107,45 +108,19 @@ const Header = () => {
                                     </NavLink>
                                 </li>
 
-                                {/* Projects Dropdown */}
-                                <li className={`menu-item projects-dropdown relative group ${activeLink === "Projects" ? "text-orange-700" : "text-gray-700"}`}
-                                    onMouseEnter={() => setIsDropdownOpen(true)}
-                                    onMouseLeave={() => setIsDropdownOpen(false)}
-                                >
-                                    <button
-                                        className="projects-button flex items-center py-2 pr-4 pl-3 hover:text-orange-700 hover:scale-110 focus:outline-none lg:p-0"
-                                        onClick={() => {
-                                            setActiveLink("Projects");
-                                            setIsDropdownOpen(!isDropdownOpen);
-                                        }}
+                                <li className="menu-item">
+                                    <NavLink
+                                        to="/contact"
+                                        className={({ isActive }) =>
+                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "Contact Us" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
+                                        }
+                                        onClick={() => setActiveLink("Contact Us")}
                                     >
-                                        Projects
-                                    </button>
-                                    <ul
-                                        className={`projects-menu absolute bg-white shadow-lg mt-2 rounded-lg transition-all duration-300 ${
-                                            isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
-                                        }`}
-                                    >
-                                        <li className="project-item">
-                                            <NavLink
-                                                to="/facebook"
-                                                className="project-link block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                                onClick={() => setActiveLink("Projects")}
-                                            >
-                                                Facebook
-                                            </NavLink>
-                                        </li>
-                                        <li className="project-item">
-                                            <NavLink
-                                                to="/ecommerce"
-                                                className="project-link block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                                onClick={() => setActiveLink("Projects")}
-                                            >
-                                                Ecommerce
-                                            </NavLink>
-                                        </li>
-                                    </ul>
+                                        projects
+                                    </NavLink>
                                 </li>
+
+                                
 
                                 <li className="menu-item">
                                     <NavLink

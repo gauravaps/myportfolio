@@ -135,7 +135,7 @@
   transition: color 0.3s ease, transform 0.2s ease;
   color: var(--text-color); /* Updated */
 } 
-
+ 
 
 .know-more-button:hover {
 
