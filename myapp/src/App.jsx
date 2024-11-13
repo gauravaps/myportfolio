@@ -11,7 +11,7 @@ import Contactus from './Components/Contactus/Contactus'
 import User from './Components/User/User'
 import Github from './Components/Github/Github'
 import Courses from './Components/Course/Courses'
-import MyAbout from './Components/About/MyAbout'
+
 
 function App() {
   const user ='gaurav';
@@ -26,7 +26,7 @@ function App() {
           <Route path='' element={<Home/>} />
 
           <Route path='/about' element={<About/>}/>
-          <Route path='myabout' element={<MyAbout/>}/>
+          
           
           
 

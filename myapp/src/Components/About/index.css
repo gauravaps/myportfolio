@@ -1,0 +1,25 @@
+:root {
+    --background-color: #ffffff; /* Light mode background */
+    --text-color: #000000;       /* Light mode text */
+  }
+  
+  .dark-mode {
+    --background-color: #121212; /* Dark mode background */
+    --text-color: #ffffff;       /* Dark mode text */
+  }
+  
+  /* Ye style body par apply karenge taaki pura page background aur text color use kare */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  
+  .bg-white {
+    background-color: var(--background-color) !important;
+  }
+  
+  .text-gray-900, .text-gray-600 {
+    color: var(--text-color) !important;
+  }
+  
