@@ -47,7 +47,7 @@ const About = () => {
          {/* Image Section */}
 <div className="w-full md:w-5/12 flex flex-col items-center">
   <img
-    src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+     src="https://res.cloudinary.com/gauravkacloud/image/upload/v1731759049/IMG20230327165354_zn8yks.jpg"
     alt="Startup"
     className="about-image sticky-image"
   />

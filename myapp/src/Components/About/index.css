@@ -25,17 +25,17 @@ body {
 /* Image Styling */
 .about-image {
   width: 100%;
-  max-width:450px; 
+  max-width:400px; 
   border-radius: 12px; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Responsive Design */
-@media (max-width: 1023px){
+ @media (max-width: 1023px){
   .about-image{
     width: 122%;
   }
-}
+} 
 
 @media (max-width: 768px) {
   .about-image {
