@@ -39,6 +39,14 @@ const Contactus = () => {
                             </p>
 
                             <div className="flex items-center mt-8 text-gray-600">
+
+                            <a
+                            href="https://www.google.com/maps/place/28-A+4th+Cross,+Wellington+Paradise,+Bengaluru,+Karnataka+-+560068/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-gray-600"
+                                >   
+
                                 <svg
                                     fill="none"
                                     stroke="currentColor"
@@ -64,9 +72,17 @@ const Contactus = () => {
                                 <div className="details   ml-4 text-md tracking-wide font-semibold w-40">
                                 28-A 4th cross wellington paradise, Bengaluru, Karnataka - 560068
                                 </div>
+                                </a>
                             </div>
 
+
                             <div className="flex items-center mt-4 text-gray-600">
+
+                            <a
+                             href="tel:+919876543210"
+                            className="flex items-center text-gray-600"
+                            >
+
                                 <svg
                                     fill="none"
                                     stroke="currentColor"
@@ -86,9 +102,15 @@ const Contactus = () => {
                                 <div className="details  ml-4 text-md tracking-wide font-semibold w-40">
                                     +91 8109107318
                                 </div>
+                                </a>
                             </div>
 
                             <div className="flex items-center mt-2 text-gray-600">
+                                     <a
+                                 href="mailto:Gauravpateltrs@gmail.com"
+                                    className="flex items-center text-gray-600"
+                                 >
+
                                 <svg
                                     fill="none"
                                     stroke="currentColor"
@@ -108,6 +130,7 @@ const Contactus = () => {
                                 <div className="details  ml-4 text-md tracking-wide font-semibold w-40">
                                     Gauravpateltrs@gmail.com
                                 </div>
+                                </a>
                             </div>
                         </div>
 
