@@ -100,9 +100,18 @@
   .download-button {
       padding: 0.5rem 1rem;
   }
+.footers-social-link{
+  width: 23px;
 }
 
 
+}
+
+@media (max-width:475px){
+  .footers-social-link{
+    width: 18px;
+  }
+}
 
 .heading {
   font-weight: bold; 
