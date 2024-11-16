@@ -5,9 +5,13 @@ import './index.css';
 const Footer = () => {
   const [number, setNumber] = useState(1);
 
+  const currentyear = new Date();
+  const getYear =currentyear.getFullYear();
+  
+
   useEffect(() => {
     const interval = setInterval(() => {
-      if (number < 1000) {
+      if (number < 50) {
         setNumber(number + 1);
       }
     }, 10); // Update every 10 milliseconds
@@ -90,9 +94,9 @@ const Footer = () => {
           </div>
           <hr className="footer-divider my-6 border-gray-400 sm:mx-auto lg:my-8" />
           <div className="footer-bottom sm:flex sm:items-center sm:justify-between">
-            <span className="footer-copy text-sm text-gray-500 sm:text-center">
-              © 2023
-              <a href="https://github.com/gauravaps" className="footer-link">gauravgitHub.com</a>
+            <span className="footer-copy  text-sm sm:text-center">
+              © {getYear}
+              <a href="https://github.com/gauravaps" className="footer-link m-1">gauravgitHub.com</a>
               . All Rights Reserved.
             </span>
             

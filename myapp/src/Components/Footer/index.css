@@ -12,9 +12,13 @@
     transform: scale(1.2); 
   }
 
-.footer-social-link {
+.footer-social-link  {
   color: #555;
   transition: color 0.3s ease, transform 0.2s ease;
+  color: var(--text-color);
+}
+
+.footer-copy span{
   color: var(--text-color);
 }
 
