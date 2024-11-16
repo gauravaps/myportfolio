@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Skills from "./Skills";
 import FooterSocialsIcons from "./FooterSocialsIcons";
 import './footer.css';
+import Sdata from "../../Sdata";
 
 const Home = () => {
     const [showFirstImage, setShowFirstImage] = useState(true);
@@ -44,9 +45,16 @@ const Home = () => {
                     Hello! I'm Gaurav Patel, an MCA graduate from Awadhesh Pratap Singh University, focused on building expertise in MERN and full-stack development for over two years. I have hands-on experience creating diverse projects, including a Facebook clone and a comprehensive eCommerce website using the MERN stack. Driven to craft scalable, high-performance applications, I’m continually expanding my skill set to develop seamless, user-centric solutions.
                 </p>
                 <Skills />
-                <Link className="download-button" to="/about">
-                    Download Resume
-                </Link>
+
+                {/* Updated Resume Button */}
+                <a
+                    className="download-button "
+                    href="/testcv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                Download Resume
+                </a>
 
 
                 {/* Toggling Images - This goes below Download Resume button */}
