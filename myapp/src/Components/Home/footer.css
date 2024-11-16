@@ -4,20 +4,20 @@
   width: 100%;
   max-width: 1200px;
    padding: 0 5rem;
-  display: flex; /* Side-by-side layout ke liye */
-  align-items: flex-start; /* Align items on top */
+  display: flex; 
+  align-items: flex-start; 
   gap: 5rem;
 }
 
 /* Image container styling */
 .image-container {
-  position: relative; /* Icons ko iske relative rakhne ke liye */
+  position: relative; 
 }
 
 .image-container img {
-  width: 100%; /* Full width of the container */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 400px; /* Restrict to max 400px */
+  width: 100%; 
+  height: auto; 
+  max-width: 400px; 
   border-radius: 10px;
 }
 
@@ -45,38 +45,53 @@
 } 
 
 /* Footer icons */
-.footers-social {
-  position: relative; /* ya static; */
-  bottom: auto; /* Remove bottom positioning */
-  left: auto; /* Reset left positioning */
+.foot-container {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
+.footers-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 
 .footers-social-link {
-  color: gray;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   
-  transition: color 0.3s ease, transform 0.2s ease;
-
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .footers-social-link:hover {
-  color: #000;
-  color: var(--text-color); /* Updated */
-  transform: scale(1.5);
+  color: #06b6d4;
+  transform: scale(1.2);
 }
+
+.footers-social-icon {
+  width: 20px;
+  height: 20px;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .container {
-      flex-direction: column; /* Mobile view me items ko stack karne ke liye */
+      flex-direction: column; 
       align-items: center;
   }
   .footers-social {
-      position: static; /* Static positioning */
-      margin-top: 1rem; /* Space above the icons */
-      justify-content: center; /* Center the icons */
+      position: static; 
+      margin-top: 1rem; 
+      justify-content: center; 
   }
 }
 
@@ -95,10 +110,10 @@
   font-size: 3rem; 
   color: black;
   max-width: 48rem; 
-  color: var(--text-color); /* Updated */
+  color: var(--text-color); 
 }
 
-/* Medium screen sizes ke liye */
+
 @media (min-width: 768px) {
   .heading {
     font-size: 3rem; 
@@ -107,12 +122,12 @@
 }
  
 .highlight {
-  color: #06b6d4; /* cyan-500 color code */
+  color: #06b6d4; 
 }
 
 .description {
-  margin-top: 1.5rem; /* mt-6 ka equivalent */
-  color: #4b5563; /* gray-600 color code */
+  margin-top: 1.5rem; 
+  color: #4b5563; 
   text-align: left;
   color: var(--text-color); /* Updated */
 }

@@ -44,16 +44,16 @@ const About = () => {
             </p>
           </div>
 
-          {/* Image Section */}
-          <div className="w-full md:w-5/12 flex justify-center">
-            <img
-              src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-              alt="Startup"
-              className="about-image sticky-image"
-            />
-            <FooterSocialsIcons/>
-            
-          </div>
+         {/* Image Section */}
+<div className="w-full md:w-5/12 flex flex-col items-center">
+  <img
+    src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+    alt="Startup"
+    className="about-image sticky-image"
+  />
+  <FooterSocialsIcons />
+</div>
+
           
         </div>
       </div>
