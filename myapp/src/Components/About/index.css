@@ -1,25 +1,44 @@
 :root {
-    --background-color: #ffffff; /* Light mode background */
-    --text-color: #000000;       /* Light mode text */
-  }
-  
-  .dark-mode {
-    --background-color: #121212; /* Dark mode background */
-    --text-color: #ffffff;       /* Dark mode text */
-  }
-  
-  /* Ye style body par apply karenge taaki pura page background aur text color use kare */
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
+  --background-color: #ffffff; /* Light mode background */
+  --text-color: #000000;       /* Light mode text */
+}
 
-  
-  .bg-white {
-    background-color: var(--background-color) !important;
+.dark-mode {
+  --background-color: #121212; /* Dark mode background */
+  --text-color: #ffffff;       /* Dark mode text */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.bg-white {
+  background-color: var(--background-color) !important;
+}
+
+.text-gray-900,
+.text-gray-600 {
+  color: var(--text-color) !important;
+}
+
+/* Image Styling */
+.about-image {
+  width: 100%;
+  max-width: 350px; /* Restrict the maximum size of the image */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-image {
+    max-width: 300px; /* Adjust image size for smaller screens */
   }
-  
-  .text-gray-900, .text-gray-600 {
-    color: var(--text-color) !important;
+}
+
+@media (max-width: 480px) {
+  .about-image {
+    max-width: 250px; /* Further reduce size for very small screens */
   }
-  
+}

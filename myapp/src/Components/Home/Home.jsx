@@ -36,7 +36,7 @@ const Home = () => {
             {/* Right side - Text content */}
             <div className="text-content">
                 <h2 className="heading">
-                    Hey! I'm <span className="highlight">Gaurav Patel</span>
+                    Hey! welcome I'm <span className="highlight">Gaurav Patel</span>
                     <br />
                     and I'm a full stack engineer.
                 </h2>

@@ -91,6 +91,9 @@
     transform: scale(1.2);
 }
 
+.dark-mode .menu-link.text-orange-700 {
+    color: #f97316; /* Orange color for active link in dark mode */
+}
 
 
 

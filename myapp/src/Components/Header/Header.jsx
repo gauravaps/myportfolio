@@ -110,11 +110,11 @@ const Header = () => {
 
                                 <li className="menu-item">
                                     <NavLink
-                                        to="/contact"
+                                        to="/projects"
                                         className={({ isActive }) =>
-                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "Contact Us" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
+                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "projects" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
                                         }
-                                        onClick={() => setActiveLink("Contact Us")}
+                                        onClick={() => setActiveLink("projects")}
                                     >
                                         projects
                                     </NavLink>
