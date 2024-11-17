@@ -1,6 +1,7 @@
 import React from 'react';
 import FooterSocialsIcons from '../Home/FooterSocialsIcons';
 import './index.css';
+import { Link, NavLink } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -53,10 +54,17 @@ const About = () => {
   />
   <FooterSocialsIcons />
 </div>
-
-          
+         
         </div>
-      </div>
+     </div>
+      <h4 className="footer-heading text-center  py-10 ">
+      <NavLink
+        to="/contact"
+        className="know-more-button "                    
+    >
+        &nbsp; Let's connect together!
+    </NavLink>
+        </h4>
     </div>
   );
 };

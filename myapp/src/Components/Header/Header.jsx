@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import amazon from '../Header/amazon2.png';
 import './index.css';
 
 const Header = () => {
-    const [activeLink, setActiveLink] = useState(""); // State to track active link
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState(""); 
+    
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const location = useLocation()
+
+    useEffect(() => {
+        const currentPath = location.pathname;
+        setActiveLink(currentPath); 
+    }, [location]);
 
 
     useEffect(() => {
@@ -63,6 +69,7 @@ const Header = () => {
 
                             <Link
                                 to="#"
+                                end
                                 className="get-started-link text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                             >
                                 Get started
@@ -75,10 +82,12 @@ const Header = () => {
                                 <li className="menu-item">
                                     <NavLink
                                         to="/"
+                                        end
                                         className={({ isActive }) =>
                                             `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "Home" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
                                         }
                                         onClick={() => setActiveLink("Home")}
+                                        
                                     >
                                         Home
                                     </NavLink>
@@ -87,10 +96,11 @@ const Header = () => {
                                 <li className="menu-item">
                                     <NavLink
                                         to="/about"
+                                        end
                                         className={({ isActive }) =>
-                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "About" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
+                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "about" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
                                         }
-                                        onClick={() => setActiveLink("About")}
+                                        onClick={() => setActiveLink("about")}
                                     >
                                         About
                                     </NavLink>
@@ -99,10 +109,11 @@ const Header = () => {
                                 <li className="menu-item">
                                     <NavLink
                                         to="/contact"
+                                        end
                                         className={({ isActive }) =>
-                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "Contact Us" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
+                                            `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "contact" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
                                         }
-                                        onClick={() => setActiveLink("Contact Us")}
+                                        onClick={() => setActiveLink("contact")}
                                     >
                                         Contact Us
                                     </NavLink>
@@ -111,6 +122,7 @@ const Header = () => {
                                 <li className="menu-item">
                                     <NavLink
                                         to="/projects"
+                                        end
                                         className={({ isActive }) =>
                                             `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "projects" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
                                         }
@@ -125,6 +137,7 @@ const Header = () => {
                                 <li className="menu-item">
                                     <NavLink
                                         to="/course"
+                                        end
                                         className={({ isActive }) =>
                                             `menu-link block py-2 pr-4 pl-3 duration-200 ${isActive || activeLink === "course" ? "text-orange-700" : "text-gray-700"} hover:text-orange-700 hover:scale-110 lg:p-0`
                                         }

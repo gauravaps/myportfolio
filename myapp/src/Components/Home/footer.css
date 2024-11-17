@@ -167,5 +167,17 @@
 } 
 
 
+@media (min-width: 339px) {
+  .know-more-button {
+   
+    font-size: 19px; 
+    font-weight: 300;
+     
+    
+  }
+
+  
+
+}
 
 

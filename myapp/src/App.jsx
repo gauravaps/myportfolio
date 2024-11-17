@@ -9,7 +9,7 @@ import Layout from './Layout'
 import About from './Components/About/About'
 import Contactus from './Components/Contactus/Contactus'
 import User from './Components/User/User'
-import Github from './Components/Github/Github'
+
 import Courses from './Components/Course/Courses'
 import Project from './Components/projects/Project'
 
@@ -29,12 +29,10 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/projects' element={<Project/>}/>
           
-          
-
           <Route path='/contact' element={<Contactus/>}/>
           <Route path='/user/:id' element={<User/>}/>
           <Route path='/course' element={<Courses/>}/>
-          <Route path='git' element={<Github/>}/>
+        
           
           </Route> 
         </Routes>

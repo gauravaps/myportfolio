@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Skills from "./Skills";
 import FooterSocialsIcons from "./FooterSocialsIcons";
 import './footer.css';
@@ -7,6 +7,7 @@ import Sdata from "../../Sdata";
 
 const Home = () => {
     const [showFirstImage, setShowFirstImage] = useState(true);
+    const [activeLink, setActiveLink] = useState("")
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -49,7 +50,7 @@ const Home = () => {
                 {/* Updated Resume Button */}
                 <a
                     className="download-button "
-                    href="/testcv.pdf"
+                    href="/gaurav_resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -74,20 +75,15 @@ const Home = () => {
         )}
         </div>
 
-        {/* Know Me More Button - This goes below images */}
-        <h4 className="footer-heading text-left text-2xl py-10 ">
-        <Link
-            className="know-more-button i"
-            to="about"
-        >
+        <h4 className="footer-heading text-left  py-10 ">
+        <NavLink
+                 to="/about"
+            className= "know-more-button "
+            >
             &nbsp; Know me more!
-        </Link>
+            </NavLink>
         </h4>
-
             </div>  
-
-            
-
 
         </div>
     );
