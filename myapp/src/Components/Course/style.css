@@ -1,3 +1,23 @@
+:root {
+  --background-color: #ffffff; 
+  --text-color: #000000;       
+}
+
+.dark-mode {
+  --background-color: #121212; 
+  --text-color: #ffffff;       
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+
+
+
 /* Container styling for responsive design */
 .main-div {
     display: flex;
@@ -16,7 +36,7 @@
     align-items: center;
     padding: 15px;
     text-align: center;
-    background-color: #f0f0f0;
+     background-color: #f0f0f0; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -33,6 +53,7 @@
     font-size: 1.1rem;
     font-weight: 500;
     margin: 10px 0;
+    color: black;
   }
   
   .btn {
@@ -43,6 +64,7 @@
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
+    
   }
   
   /* Full-screen modal */
@@ -52,7 +74,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+     background-color: rgba(0, 0, 0, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,12 +91,14 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #fff;
+    background-color: #fff;   
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+     color: var(--text-color); 
+     background-color: var(--background-color);   
   }
   
   /* Responsive text and layout adjustments */

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Sdata from "../../Sdata";
 import React, { useState } from 'react';
+import './style.css';
 
 
  

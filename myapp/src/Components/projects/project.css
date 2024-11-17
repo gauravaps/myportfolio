@@ -1,0 +1,152 @@
+:root {
+    --background-color: #ffffff; 
+    --text-color: #000000;       
+  }
+  
+  .dark-mode {
+    --background-color: #121212; 
+    --text-color: #ffffff;       
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+
+
+
+
+
+
+.projects-section {
+    padding: 2rem 1rem;
+    background-color: #f9fafb;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures the title and grid are centered */
+    color: var(--text-color);
+  }
+  
+  .section-title {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+    color: var(--text-color);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Maintain consistent spacing */
+    width: 100%;
+    max-width: 1200px; /* Center align the grid on big screens */
+  }
+  
+  .project-card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Prevent image distortion */
+  }
+  
+  .project-content {
+    padding: 1rem 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Align title to center */
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-link {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .project-link:hover {
+    color: #1e40af;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .projects-section {
+      padding: 1.5rem;
+    }
+  
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .projects-grid {
+      gap: 1.5rem;
+    }
+  
+    .project-card {
+      box-shadow: none;
+      border: 1px solid #e5e7eb;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr; /* Single-column layout for small screens */
+    }
+  
+    .project-card {
+      border-radius: 0.25rem;
+    }
+  }
+  
+
+
+/* Media Queries for specific screen sizes */
+@media (max-width: 769px) and (min-width: 501px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr); /* Show 2 cards in this range */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .projects-grid {
+      grid-template-columns: 1fr; /* Show only 1 card */
+    }
+  }
