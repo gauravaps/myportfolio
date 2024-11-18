@@ -16,7 +16,7 @@ const Contactus = () => {
         e.preventDefault()
         
 
-       const result= await axios.post("http://localhost:5000",inputuser) ;
+       const result= await axios.post(`${import.meta.env.VITE_PORT}`,inputuser) ;
 
         
         setInputuser({email:'',name:'',msg:'',phone:""})   
@@ -147,7 +147,7 @@ const Contactus = () => {
                                     onChange={handelchange}
                                     value={inputuser.name}
                                     placeholder="Full Name"
-                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400   font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
 
@@ -163,7 +163,7 @@ const Contactus = () => {
                                     onChange={handelchange}
                                     value={inputuser.email}
                                     placeholder="Email"
-                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
 
@@ -179,7 +179,7 @@ const Contactus = () => {
                                     onChange={handelchange}
                                     value={inputuser.phone}
                                     placeholder="Telephone Number"
-                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
                             <div className="flex flex-col mt-2">
@@ -194,7 +194,7 @@ const Contactus = () => {
                                     onChange={handelchange}
                                     value={inputuser.msg}
                                     placeholder="Please Enter your Query Here.."
-                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
 

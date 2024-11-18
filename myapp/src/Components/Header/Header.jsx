@@ -11,6 +11,7 @@ const Header = () => {
 
     useEffect(() => {
         const currentPath = location.pathname;
+        console.log('real path --' ,location.pathname)
         setActiveLink(currentPath); 
     }, [location]);
 
@@ -68,7 +69,7 @@ const Header = () => {
                      </label>
 
                             <Link
-                                to="#"
+                                to="/user"
                                 end
                                 className="get-started-link text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                             >
