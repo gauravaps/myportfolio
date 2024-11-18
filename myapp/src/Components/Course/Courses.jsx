@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Sdata from "../../Sdata";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { HashLoader } from "react-spinners";
+
 import './style.css';
 
 
@@ -8,17 +10,38 @@ import './style.css';
 
 const Courses = () => {
   const [fullScreen, setFullScreen] = useState({ isActive: false, imgSrc: "" });
+  const [loading ,setloading] =useState(Sdata.length ===0)
+
+  // useEffect(()=>{
+  //     if(Sdata.length > 0){
+  //       setloading(false)
+  //     }
+  // },[Sdata])
+
 
   const handleFullScreen = (imgSrc) => {
     setFullScreen({ isActive: true, imgSrc });
   };
 
+
+
   const handleCloseFullScreen = () => {
     setFullScreen({ isActive: false, imgSrc: "" });
   };
 
+
+
   return (
     <div className="main-div">
+
+{loading ? (
+      <div className="sekelton_loader">
+        <HashLoader color="#1876f2" size={30} />
+      </div>
+    ) : ( 
+
+    <>   
+
       {
         Sdata.map((val, ind) => {
           return (
@@ -32,6 +55,8 @@ const Courses = () => {
           );
         })
       }
+
+      </>)}
 
       {/* Full-screen modal */}
       {fullScreen.isActive && (

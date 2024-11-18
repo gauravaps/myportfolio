@@ -16,6 +16,13 @@ body {
 
 
 
+.sekelton_loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height to push the footer down */
+  background-color: var(--background-color);
+}
 
 
 /* Container styling for responsive design */
@@ -95,6 +102,7 @@ body {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     border-radius: 5px;
      color: var(--text-color); 

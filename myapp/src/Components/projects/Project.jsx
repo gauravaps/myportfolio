@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { HashLoader } from "react-spinners";
 import './project.css';
 
 const Project = () => {
+
+  const [loading ,setloading] =useState(true)
+
   const projects = [
     {
       id: 1,
       name: 'Real Facebook Clone',
       description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!',
+        'Lorem  id consequatur atque doloremque!',
       image:
         'https://res.cloudinary.com/gauravkacloud/image/upload/v1731759049/IMG20230327165354_zn8yks.jpg',
       liveUrl: 'https://your-live-project-url.com',
@@ -76,9 +80,29 @@ const Project = () => {
     
   ];
 
+
+
+
+  useEffect(()=>{
+    if(projects.length > 0){
+      setloading(false)
+    }
+  },[projects])
+
   return (
+    
+
     <section className="projects-section">
-  <h1 className="section-title">My Projects</h1>
+
+    {loading ? (
+      <div className="sekelton_loader">
+        <HashLoader color="#1876f2" size={30} />
+      </div>
+    ) : ( 
+
+    <>   
+
+<h1 className="section-title">My Projects</h1>
   <div className="projects-grid">
     {projects.map((project) => (
       <div key={project.id} className="project-card">
@@ -112,6 +136,10 @@ const Project = () => {
       </div>
     ))}
   </div>
+  </>
+
+   )}
+
 </section>
       );
 };
