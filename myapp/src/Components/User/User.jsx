@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
+import './user.css';
 
 const User = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [loading ,setloading] = useState(false)
   const navigate = useNavigate();
 
   const checkAdmin = async (e) => {
@@ -12,12 +15,14 @@ const User = () => {
     setError("");
 
     try {
+      setloading(true)
       const { data } = await axios.post(
         `${import.meta.env.VITE_PORT}/admin`,
         { email }
       );
 
       if (data.message) {
+        setloading(false)
         localStorage.setItem("isAdmin", true);
         navigate("/addproject");
       } else {
@@ -25,24 +30,31 @@ const User = () => {
         setError("Admin user not found.");
       }
     } catch (error) {
+      setloading(false)
       localStorage.removeItem("isAdmin");
       setError(error.response?.data?.message || "An error occurred.");
     }
   };
 
   return (
-    <div>
-      <h1>Are you unauthorized?</h1>
-      <form onSubmit={checkAdmin}>
+    <div className="user-container">
+      <h1 className="user-heading">Are you unauthorized?</h1>
+      <form onSubmit={checkAdmin} className="user-form">
         <input
           type="text"
           placeholder="Enter your credential"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="user-input"
         />
-        <button type="submit">Go..</button>
+        {loading ? (  <ClipLoader size={20} color="#1876f2" loading={loading} />) :(
+          <button type="submit" className="user-button">
+          Check..
+        </button>
+        )}
+        
       </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="user-error">{error}</p>}
     </div>
   );
 };

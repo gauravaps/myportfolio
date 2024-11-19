@@ -4,6 +4,7 @@ const dbConnection = require('./connection/dbConnection');
 const dotenv =require('dotenv');
 
 const router = require('./routes/queryRoutes');
+const projectRouter = require('./routes/AddProjectRoutes');
 
 
 
@@ -14,7 +15,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(cors());
 
 // query router
-app.use('/',router);
+app.use('/', router);
+//add project route
+app.use('/' , projectRouter);
 
    
 
