@@ -1,4 +1,5 @@
 const mongoose =require('mongoose');
+const validator = require("validator");
 
 const projectSchema = new mongoose.Schema({
 
@@ -19,24 +20,14 @@ const projectSchema = new mongoose.Schema({
 
     liveUrl: {
         type: String,
-        required: true,
-        validate: {
-            validator: function (v) {
-                return /^(http|https):\/\/[^ "]+$/.test(v); // Regex for URL validation
-            },
-            message: (props) => `${props.value} is not a valid URL!`,
-        },
+        required: true,  // Just the type and required field, no validation
     },
     sourceCode: {
         type: String,
-        required: true,
-        validate: {
-            validator: function (v) {
-                return /^(http|https):\/\/[^ "]+$/.test(v);
-            },
-            message: (props) => `${props.value} is not a valid URL!`,
-        },
+        required: true,  // Just the type and required field, no validation
     },
+    
+    
 
 
 },{timestamps:true});
