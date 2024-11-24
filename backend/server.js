@@ -6,14 +6,14 @@ const dotenv =require('dotenv');
 const router = require('./routes/queryRoutes');
 const projectRouter = require('./routes/AddProjectRoutes');
 
-console.log('testing.....vv')
+console.log('testing.....www')
 
 dotenv.config();
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors());
-
+ 
 // query router
 app.use('/', router);
 //add project route

@@ -6,6 +6,7 @@ import './user.css';
 
 const User = () => {
   const [email, setEmail] = useState("");
+  const [password ,setpassword] =useState('');
   const [error, setError] = useState("");
   const [loading ,setloading] = useState(false)
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const User = () => {
       setloading(true)
       const { data } = await axios.post(
         `${import.meta.env.VITE_PORT}/admin`,
-        { email }
+        { email ,password}
       );
 
       if (data.message) {
@@ -46,7 +47,17 @@ const User = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="user-input"
-        />
+        /> 
+
+        <input
+          type="password"
+          placeholder="Enter your secret code"
+          value={password}
+          onChange={(e) => setpassword(e.target.value)}
+          className="user-input"
+        /> 
+
+
         {loading ? (  <ClipLoader size={20} color="#1876f2" loading={loading} />) :(
           <button type="submit" className="user-button">
           Check..
