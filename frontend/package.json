@@ -1,5 +1,6 @@
 {
-  "name": "myapp",
+  "name": "frontend",
+  
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +11,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.5.0",
+    "axios": "^1.7.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.28.0",
+    "react-router-dom": "^7.0.1",
     "react-spinners": "^0.14.1"
   },
   "devDependencies": {

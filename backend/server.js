@@ -6,7 +6,7 @@ const dotenv =require('dotenv');
 const router = require('./routes/queryRoutes');
 const projectRouter = require('./routes/AddProjectRoutes');
 
-
+console.log('testing.....vv')
 
 dotenv.config();
 const app=express()
