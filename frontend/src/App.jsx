@@ -10,6 +10,9 @@ import Project from './Components/projects/Project';
 import AddProject from './Components/projects/AddProject';
 import ProtectedRoute from './Components/User/ProtectedRoute';
 import { useEffect } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'; 
+
 
 function App() {
   return (
@@ -17,6 +20,16 @@ function App() {
       <BrowserRouter>
         {/* Insert RemoveAdminOnNavigation inside the BrowserRouter */}
         <RemoveAdminOnNavigation />
+
+        <ToastContainer 
+          position="top-right" // Position of Toast (e.g., top-right, bottom-left)
+          autoClose={3000}    // Auto close in milliseconds (3 seconds here)
+          hideProgressBar={false} // Show/Hide progress bar
+          newestOnTop={false} // Show newest toast on top
+          closeOnClick        // Close toast on click
+          pauseOnHover        // Pause toast on hover
+        />
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />

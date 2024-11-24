@@ -45,8 +45,8 @@ exports.NewProjectAdd = async(req ,res) =>{
     await newProject.save();
 
     return res.status(201).json({
-        message: "Project added successfully!",
-        project: newProject,
+        message: "project uploaded successfully",
+        
     });
 
 
