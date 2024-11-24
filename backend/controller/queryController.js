@@ -1,11 +1,12 @@
 const QueryModel = require("../models/mongo");
+const bcrypt =require('bcryptjs');
 
 
 
 exports.sendQuery = async (req, res) => {
     try {
-        const { name, email, phone, msg } = req.body;
-        const newQuery = new QueryModel({ name, email, phone, msg });
+        const { name, email,password, phone, msg } = req.body;
+        const newQuery = new QueryModel({ name, email,password, phone, msg });
         const savedQuery = await newQuery.save();
             
         res.status(201).json(savedQuery);
@@ -19,11 +20,11 @@ exports.sendQuery = async (req, res) => {
 exports.findAdmin = async (req, res) => {
     try {
         
-        const { email } = req.body;
+        const { email,password  } = req.body;
 
         // Validate email input
-        if (!email) {
-            return res.status(400).json({ message: "Email is required ." });
+        if (!email || !password) {
+            return res.status(400).json({ message: "Email is required and password." });
         }
 
         // Query to find the admin user with the provided email
@@ -32,6 +33,12 @@ exports.findAdmin = async (req, res) => {
         // Check if admin user exists
         if (!adminUser) {
             return res.status(404).json({ message: "this is an unauthorized credentials ." });
+        }
+
+        const isPasswordCorrect = await bcrypt.compare(password, adminUser.password);
+
+        if (!isPasswordCorrect) {
+            return res.status(401).json({ message: "Invalid password." });
         }
 
         // Success response
