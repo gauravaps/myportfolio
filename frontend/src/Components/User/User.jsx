@@ -12,9 +12,6 @@ const User = () => {
   const navigate = useNavigate();
 
   const tokenFromLocalStorage = localStorage.getItem("token");
-const cookies = document.cookie;
-console.log("Token from localStorage:", tokenFromLocalStorage);
-console.log("Cookies available:", cookies);
 
 
   const checkAdmin = async (e) => {
@@ -32,15 +29,15 @@ console.log("Cookies available:", cookies);
         console.log('login data---' , data)
          localStorage.setItem('token' ,data.token)
         setloading(false)
-        localStorage.setItem("isAdmin", true);
+       
         navigate("/addproject");
       } else {
-        localStorage.removeItem("isAdmin");
+       
         setError("Admin user not found.");
       }
     } catch (error) {
       setloading(false)
-      localStorage.removeItem("isAdmin");
+     
       setError(error.response?.data?.message || "An error occurred.");
     }
   };

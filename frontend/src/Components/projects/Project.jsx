@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { HashLoader } from "react-spinners";
 import './project.css';
+import { Link } from 'react-router-dom';
 
 const Project = () => {
 
   const [loading ,setloading] =useState(true)
+  const token = localStorage.getItem("token");
+
 
   const projects = [
     {
@@ -100,9 +103,11 @@ const Project = () => {
       </div>
     ) : ( 
 
-    <>   
+    <> 
+    {token ? (  <Link to={'/addproject'} className="section-title">Add projects.</Link> ) 
+    : (<h1 className="section-title">Your latest projects..</h1>)}  
+  
 
-<h1 className="section-title">My Projects</h1>
   <div className="projects-grid">
     {projects.map((project) => (
       <div key={project.id} className="project-card">

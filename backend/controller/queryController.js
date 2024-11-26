@@ -46,8 +46,7 @@ exports.login = async (req, res) => {
        
        
 
-         res
-            .status(201).json({
+         res.status(201).json({
                 message: true,
                 id: adminUser._id,
                 name: adminUser.name,

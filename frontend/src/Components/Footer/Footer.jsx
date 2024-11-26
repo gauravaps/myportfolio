@@ -38,12 +38,12 @@ const Footer = () => {
 
             <div className='footer-statistics project'>
               <h1 className="statistics-title">Clients</h1>
-              <h1 className="statistics-number">{number}</h1>
+              <h1 className="statistics-number">{number}+</h1>
             </div>
 
             <div className='footer-statistics project'>
               <h1 className="statistics-title">Projects</h1>
-              <h1 className="statistics-number">{number}</h1>
+              <h1 className="statistics-number">{number}+</h1>
             </div>
 
             <div className="footer-links grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

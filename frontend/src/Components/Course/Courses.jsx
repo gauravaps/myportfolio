@@ -11,12 +11,9 @@ import './style.css';
 const Courses = () => {
   const [fullScreen, setFullScreen] = useState({ isActive: false, imgSrc: "" });
   const [loading ,setloading] =useState(Sdata.length ===0)
+  const token = localStorage.getItem("token");
 
-  // useEffect(()=>{
-  //     if(Sdata.length > 0){
-  //       setloading(false)
-  //     }
-  // },[Sdata])
+  
 
 
   const handleFullScreen = (imgSrc) => {

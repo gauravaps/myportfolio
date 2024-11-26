@@ -3,6 +3,7 @@ import './addproject.css';
 import axios from "axios";
 import { toast } from 'react-toastify';
 import { ClipLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 const AddProject = () => {
   const [image, setImage] = useState('');
@@ -12,7 +13,7 @@ const AddProject = () => {
   const [sourceCode, setSourceCode] = useState('');
   const [loading ,setloading] = useState(false)
   const token = localStorage.getItem("token");
-  console.log('localstorage toekn--', token)
+  
   
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -75,7 +76,9 @@ const AddProject = () => {
 
   return (
     <div className="add-project-container">
-      <h1 className="add-project-title">Add your new project</h1>
+      
+    <h1 className="add-project-title">your new project</h1>
+      
       <form className="add-project-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-group">

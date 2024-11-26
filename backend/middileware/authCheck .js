@@ -1,3 +1,4 @@
+
 const jsonwebtoken = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
@@ -6,9 +7,9 @@ dotenv.config();
 exports.authCheck = (req, res, next) => {
     const token = req.cookies?.token || req.header('Authorization')?.replace('Bearer ', '');
 
-    console.log('Cookies:', req.cookies);
-    console.log('Headers:', req.headers);
-    console.log('token--' , token)
+    // console.log('Cookies:', req.cookies);
+    // console.log('Headers:', req.headers);
+    // console.log('token--' , token)
 
 
     if (!token) {
