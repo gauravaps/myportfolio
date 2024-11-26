@@ -75,6 +75,12 @@ const Home = () => {
         )}
         </div>
 
+            <p className="text-left text-lg py-7"> "Take your business or personal <span className="highlight" > portfolio</span>  to the next level with innovative web solutions! 
+                I specialize in creating small-scale <span className="highlight">  websites, including static, dynamic, and MERN stack applications,</span>
+                 tailored for your shop,
+                 business promotion, or personal needs. Connect with me to bring your ideas to life!"
+                 </p>
+
         <h4 className="footer-heading text-left  py-10 ">
         <NavLink
                  to="/about"

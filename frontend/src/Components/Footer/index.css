@@ -26,3 +26,16 @@
   color: #1a73e8; 
   transform: scale(1.5);
 }
+
+
+.statistics-title{
+  font-size: larger;
+  font-weight: 500;
+}
+
+.statistics-number{
+  font-size: large;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+}

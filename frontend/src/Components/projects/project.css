@@ -191,7 +191,18 @@
   }  
 
 
+  .add-project{
+     border: 1px solid #06b6d4; 
+    border-radius: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1px;
+    
+  }
 
+  .add-project:hover{
+    
+    background-color: #06b6d4;
+  }
 
   
 

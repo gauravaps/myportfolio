@@ -56,8 +56,21 @@ const About = () => {
 </div>
          
         </div>
+
+        
      </div>
+
+     
+
       <h4 className="footer-heading text-center  py-10 ">
+
+      <p className="business  py-8"> "Take your business or personal <span className="highlight" > portfolio </span>  
+     to the next level with innovative web solutions! 
+      I specialize in creating small-scale   websites, including static, dynamic, and <span className="highlight" >  MERN stack applications, </span>
+      tailored for your shop,
+        business promotion, or personal needs. Connect with me to bring your ideas to life!"
+        </p>
+
       <NavLink
         to="/contact"
         className="know-more-button "                    

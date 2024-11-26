@@ -104,7 +104,7 @@ const Project = () => {
     ) : ( 
 
     <> 
-    {token ? (  <Link to={'/addproject'} className="section-title">Add projects.</Link> ) 
+    {token ? (  <Link to={'/addproject'} className="section-title add-project">Add projects.</Link> ) 
     : (<h1 className="section-title">Your latest projects..</h1>)}  
   
 
