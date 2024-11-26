@@ -11,6 +11,8 @@ const AddProject = () => {
   const [liveUrl, setLiveUrl] = useState('');
   const [sourceCode, setSourceCode] = useState('');
   const [loading ,setloading] = useState(false)
+  const token = localStorage.getItem("token");
+  console.log('localstorage toekn--', token)
   
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -35,10 +37,22 @@ const AddProject = () => {
       formData.append('sourceCode', sourceCode);
       setloading(true)
       
-      const { data } = await axios.post(`${import.meta.env.VITE_PORT}/addproject`, formData);
+      const { data } = await axios.post(`${import.meta.env.VITE_PORT}/addproject`, formData ,
+
+        {
+          headers: {
+              Authorization: `Bearer ${token}`,
+          },
+          
+      }
+     
+
+
+      );
 
       if (data) {
         // Reset form fields
+        console.log('new project added--' , data);
         setImage('');
         setName('');
         setDescription('');
@@ -51,9 +65,11 @@ const AddProject = () => {
       }
     } catch (error) {
       console.error('Error while adding project:', error);
+      
 
       // Show error toast
       toast.error(error.response?.data?.message || "Something went wrong. Please try again.");
+      setloading(false)
     }
   };
 

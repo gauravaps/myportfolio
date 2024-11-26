@@ -1,13 +1,14 @@
 const express=require('express');
-const { sendQuery, findAdmin } = require('../controller/queryController');
+const { sendQuery,  login } = require('../controller/queryController');
+const { authCheck } = require('../middileware/authCheck ');
 
 
 const router =express.Router();
 
-router.post('/' ,sendQuery);
+router.post('/',sendQuery);
 
 //find admin user
-router.post('/admin' ,findAdmin)
+router.post('/admin' ,login)
 
 
 

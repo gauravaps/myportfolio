@@ -16,6 +16,11 @@ exports.NewProjectAdd = async(req ,res) =>{
             return res.status(400).json({ message: "All fields are required!" });
         }
 
+        // Check if user is authenticated
+        if (!req.user || !req.user.id) {
+            return res.status(401).json({ message: "Unauthorized: User not authenticated." });
+        }
+
         let imageUrl = null;
 
         //upload image to cloudinary
@@ -35,6 +40,7 @@ exports.NewProjectAdd = async(req ,res) =>{
     //save project to data base 
 
     const newProject  = new AddProject({
+        addedBy:req.user.id,
         name,
         description,
         image:imageUrl || undefined ,
@@ -43,9 +49,11 @@ exports.NewProjectAdd = async(req ,res) =>{
     });
 
     await newProject.save();
+    
 
     return res.status(201).json({
         message: "project uploaded successfully",
+        newProject,
         
     });
 

@@ -11,6 +11,12 @@ const User = () => {
   const [loading ,setloading] = useState(false)
   const navigate = useNavigate();
 
+  const tokenFromLocalStorage = localStorage.getItem("token");
+const cookies = document.cookie;
+console.log("Token from localStorage:", tokenFromLocalStorage);
+console.log("Cookies available:", cookies);
+
+
   const checkAdmin = async (e) => {
     e.preventDefault();
     setError("");
@@ -23,6 +29,8 @@ const User = () => {
       );
 
       if (data.message) {
+        console.log('login data---' , data)
+         localStorage.setItem('token' ,data.token)
         setloading(false)
         localStorage.setItem("isAdmin", true);
         navigate("/addproject");
