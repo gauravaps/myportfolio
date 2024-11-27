@@ -69,3 +69,21 @@ exports.NewProjectAdd = async(req ,res) =>{
 
 
 
+
+exports.GetAllProjects = async (req, res) => {
+    try {
+        
+        const projects = await AddProject.find().select('-addedBy')
+
+        return res.status(200).json({
+            message: "Projects fetched successfully",
+            projects,
+        });
+    } catch (error) {
+        console.error("Error in GetAllProjects:", error);
+        return res.status(500).json({ message: "Internal server error.", error: error.message });
+    }
+};
+
+
+
