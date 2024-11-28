@@ -79,8 +79,10 @@
 
 .project-image {
   width: 100%;
-  height: 380px; 
+  height: 350px; 
   object-fit: cover; 
+  object-position: center;
+  
    
 }
 
@@ -109,11 +111,14 @@
     color: #4b5563;
     line-height: 1.4;
     overflow: hidden;
-    text-overflow: ellipsis;
+     text-overflow: ellipsis; 
     white-space: normal;
     display: -webkit-box;
+    /* display: block; */
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
   }
   
   
@@ -133,6 +138,33 @@
   .project-link:hover {
     color: #1e40af;
   }
+
+
+/* Specific fix for 1024px to 1115px */
+@media (min-width: 1024px) and (max-width: 1115px) {
+  .project-description {
+    display: block; 
+    overflow: visible; 
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    line-height: 1.4; 
+  }
+
+  .project-content {
+    padding: 1.5rem; 
+  }
+
+  .project-card {
+    height: auto; 
+  }
+}
+
+
+
+
+
+
+
   
   /* Media Queries for Responsiveness */
   @media (max-width: 1024px) {
@@ -147,7 +179,9 @@
       overflow: visible;
       -webkit-line-clamp: unset;
       -webkit-box-orient: unset;
+  
     }
+
     .projects-section {
       padding: 1.5rem;
     }
@@ -165,6 +199,17 @@
       border: 1px solid #e5e7eb;
     }
   }
+
+
+  @media (max-width: 768px) {
+    .project-image {
+      object-fit: contain; 
+      height: auto;
+      max-height: 400px; 
+    }
+  }
+
+
   
   @media (max-width: 768px) {
 
@@ -229,5 +274,12 @@
 
   
 
-
   
+/* Ensure truncation for larger screens */
+@media (min-width: 1116px) {
+  .project-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
