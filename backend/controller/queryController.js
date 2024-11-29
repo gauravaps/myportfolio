@@ -39,11 +39,11 @@ exports.login = async (req, res) => {
             return res.status(401).json({ message: "Invalid password." });
         }
 
-        const token = await generateToken(adminUser._id, '7d');
+        // const token = await generateToken(adminUser._id, '7d');
+        const token = await generateToken(adminUser, '7d');
 
        
-
-       
+      
        
 
          res.status(201).json({

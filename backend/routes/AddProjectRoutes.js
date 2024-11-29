@@ -1,6 +1,6 @@
 const express =require('express');
 const upload = require('../middileware/multer.middileware');
-const { NewProjectAdd, GetAllProjects } = require('../controller/addProjectController');
+const { NewProjectAdd, GetAllProjects, EditProject, DeleteProject } = require('../controller/addProjectController');
 const { authCheck } = require('../middileware/authCheck ');
 
 
@@ -11,6 +11,12 @@ projectRouter.post('/addproject',authCheck ,upload.single('image') , NewProjectA
 
 //get all project list
 projectRouter.get('/getprojects' ,GetAllProjects);
+
+//update project /Edit project..
+projectRouter.put('/editproject' , authCheck , upload.single('image') , EditProject);
+
+//Delete project..
+projectRouter.delete('/delete/:projectId' , authCheck , DeleteProject);
 
 
 module.exports =projectRouter;

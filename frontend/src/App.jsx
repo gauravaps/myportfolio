@@ -49,6 +49,7 @@ function App() {
             <Route element={<LoggedInRoutes/>}> 
             <Route   path="/addproject"  element= {<AddProject /> }/> 
             <Route path='/addcertificate' element={<AddCertificate/>}/>
+            {/* <Route path='/editproject' element={<EditModal/>}/> */}
             
             </Route>
            
