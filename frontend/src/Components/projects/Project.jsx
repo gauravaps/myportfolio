@@ -49,6 +49,7 @@ const Project = () => {
 const handleEditSubmit = async (formData) => {
   try {
     const token = localStorage.getItem('token');
+    setloading(true)
     const response = await axios.put(
       `${import.meta.env.VITE_PORT}/editproject`,
       formData,
@@ -68,9 +69,11 @@ const handleEditSubmit = async (formData) => {
     setProjects(updatedProjects);
   } catch (error) {
     console.error('Error updating project:', error);
+    setloading(false)
     toast.error(error.response?.data?.message || "Something went wrong. Please try again.");
   } finally {
     setShowModal(false);
+    setloading(false)
   }
 };
 
@@ -177,6 +180,7 @@ try {
   project={selectedProject}
   modalClose={() => setShowModal(false)} 
   handleEditSubmit={handleEditSubmit}
+  loading={loading}
   />
 )}
 

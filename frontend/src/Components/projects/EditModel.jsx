@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { ClipLoader } from "react-spinners";
+
 import './edit.css';
 
-const EditModal = ({ project, modalClose, handleEditSubmit }) => {
+const EditModal = ({ project, modalClose, handleEditSubmit ,loading}) => {
   const [name, setName] = useState(project.name);
   const [description, setDescription] = useState(project.description);
   const [liveUrl, setLiveUrl] = useState(project.liveUrl);
@@ -55,7 +57,11 @@ const EditModal = ({ project, modalClose, handleEditSubmit }) => {
           accept="image/*"
         />
         <div className="modal-actions">
-          <button onClick={handleSubmit}>Save Changes</button>
+          
+        {loading ? (  <ClipLoader size={20} color="#1876f2" loading={loading} />):(
+              <button onClick={handleSubmit}>Save Changes</button>
+            )}
+          
           <button onClick={modalClose}>Cancel</button>
         </div>
       </div>
