@@ -20,12 +20,13 @@ app.use(cookieParser())
 
 
 
-;
+
 
 
  
 // query router
 app.use('/', router);
+
 //add project route
 app.use('/' , projectRouter);
 
@@ -37,5 +38,5 @@ dbConnection()
 
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port.. ${port}`);
   });   
