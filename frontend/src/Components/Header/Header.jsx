@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import amazon from "../Header/amazon2.png";
 import "./index.css";
-
+ 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("");
 
@@ -168,7 +168,7 @@ const Header = () => {
 
                 <li className="menu-item">
                   <NavLink
-                    to="/course"
+                    to="/certificates"
                     end
                     className={({ isActive }) =>
                       `menu-link block py-2 pr-4 pl-3 duration-200 ${

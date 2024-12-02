@@ -8,7 +8,7 @@ const FooterSocialsIcons = () => {
   return (
     <div className="foot-container" >
     <div className="footers-social flex mt-4  space-x-4 sm:justify-center sm:mt-2">
-              <Link to="#" className="footers-social-link text-gray-500">
+              <Link to="https://www.facebook.com/login/" className="footers-social-link text-gray-500">
                 <svg
                   className="footers-social-icon w-4 h-4"
                   aria-hidden="true"
@@ -36,7 +36,8 @@ const FooterSocialsIcons = () => {
                 </svg>
                 <span className="sr-only">Discord community</span>
               </Link>
-              <Link to="#" className="footers-social-link text-gray-500">
+
+              <Link to="https://x.com/Gauravaps" className="footers-social-link text-gray-500">
                 <svg
                   className="footers-social-icon w-4 h-4"
                   aria-hidden="true"
@@ -53,7 +54,24 @@ const FooterSocialsIcons = () => {
                 <span className="sr-only">Twitter page</span>
               </Link>
 
-              <Link to="#" className= "footers-social-link  text-gray-500">
+
+
+              <Link to="https://www.linkedin.com/in/gauravaps/" className="footers-social-link text-gray-500">
+  <svg
+    className="footers-social-icon w-4 h-4"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path d="M4.983 3.25a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0ZM0 6.636h4.854v12.727H0V6.636ZM7.318 6.636h4.655v1.747h.066c.647-1.222 2.229-2.488 4.584-2.488 4.9 0 5.8 3.224 5.8 7.417v8.05H17.87v-7.134c0-1.704-.032-3.897-2.374-3.897-2.374 0-2.739 1.854-2.739 3.768v7.263H7.318V6.636Z" />
+  </svg>
+  <span className="sr-only">LinkedIn page</span>
+</Link>
+
+
+
+              <Link to="https://github.com/gauravaps" className= "footers-social-link  text-gray-500">
                             <svg
                                 className="footers-social-icon  w-4 h-4"
                                 aria-hidden="true"
@@ -70,6 +88,7 @@ const FooterSocialsIcons = () => {
                             <span className="sr-only">GitHub account</span>
                         </Link>
 
+{/* 
                  <Link to="#" className=  "footers-social-link    text-gray-500">
                             <svg
                                 className="footers-social-icon  w-4 h-4"
@@ -85,7 +104,7 @@ const FooterSocialsIcons = () => {
                                 />
                             </svg>
                             <span className="sr-only">Dribbble account</span>
-                        </Link>     
+                        </Link>      */}
 
             </div>
             </div>

@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { toast } from 'react-toastify';
+import { ClipLoader } from "react-spinners";
 import './app.css';
 
 
 const Contactus = () => {
     const[inputuser,setInputuser]=useState({name:"",email:"",phone:"",msg:"",})
+    const [loading ,setloading] = useState(false)
 
     const handelchange=(event)=>{
         setInputuser({...inputuser,[event.target.name]:event.target.value,});
@@ -12,17 +15,41 @@ const Contactus = () => {
     }
 
     
-    const submit= async(e)=>{
-        e.preventDefault()
+    const submit = async (e) => {
+        e.preventDefault();
+      
         
-
-       const result= await axios.post(`${import.meta.env.VITE_PORT}`,inputuser) ;
-
-        
-        setInputuser({email:'',name:'',msg:'',phone:""})   
-
-        
-    }
+        const { name, email, phone, msg } = inputuser;
+      
+        // Form validation
+        if (!name || !email || !phone || !msg) {
+          toast.error("All fields are required!");
+          return;
+        }
+      
+        try {
+          setloading(true); 
+      
+         
+          const { data } = await axios.post(
+            `${import.meta.env.VITE_PORT}`, 
+            inputuser
+          );
+      
+          if (data) {
+            toast.success(data.message || "Your query has been sent");
+            
+            setInputuser({ name: "", email: "", phone: "", msg: "" });
+            setloading(false);
+          }
+        } catch (error) {
+          toast.error(
+            error.response?.data?.message || "Something went wrong. Please try again."
+          );
+          setloading(false);
+        }
+      };
+      
 
 
   return (
@@ -197,13 +224,18 @@ const Contactus = () => {
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
-
-                            <button
+                             
+                                  {loading ? (  <ClipLoader size={20} color="#1876f2" loading={loading} />)
+                                  :(
+                                    <button
                                 type="submit"
                                 className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6  rounded-lg mt-3  hover:bg-orange-600 transition ease-in-out duration-300"
                             >
                                 Submit
                             </button>
+                                  )
+                            }
+                            
                         </form>
                     </div>
                     

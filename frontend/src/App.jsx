@@ -41,7 +41,7 @@ function App() {
             <Route path="/projects" element={<Project />} />
             <Route path="/contact" element={<Contactus />} />
             <Route path="/user/:id" element={<User />} />
-            <Route path="/course" element={<Courses />} />
+            <Route path="/certificates" element={<Courses />} />
             <Route path="/user" element={<User />} />
             
 

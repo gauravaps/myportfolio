@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import amazon from "../Header/amazon2.png";
 import './index.css';
 
 const Footer = () => {
@@ -29,7 +30,8 @@ const Footer = () => {
             <div className="footer-logo mb-6 md:mb-0">
               <Link to="/" className="flex items-center">
                 <img
-                  src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
+                  // src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
+                  src={amazon}
                   className="footer-logo-image mr-3 h-16"
                   alt="Logo"
                 />
@@ -38,26 +40,25 @@ const Footer = () => {
 
             <div className='footer-statistics project'>
               <h1 className="statistics-title">Clients</h1>
-              <h1 className="statistics-number">{number}+</h1>
+              <h1 className="statistics-number">{number} +</h1>
             </div>
 
             <div className='footer-statistics project'>
               <h1 className="statistics-title">Projects</h1>
-              <h1 className="statistics-number">{number}+</h1>
+              <h1 className="statistics-number">{number} +</h1>
             </div>
 
             <div className="footer-links grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div className="footer-section">
                 <h2 className="footer-section-title mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                 <ul className="footer-section-list text-grey-600 font-medium">
-                  <li className="footer-section-item mb-4">
-                    <Link to="/" className="footer-link ">Home</Link>
+
+                 
+                  <li>
+                    <Link to="/projects" className="footer-link ">projects</Link>
                   </li>
                   <li>
-                    <Link to="/about" className="footer-link ">About</Link>
-                  </li>
-                  <li>
-                    <Link to="/about" className="footer-link ">Our Courses</Link>
+                    <Link to="/certificates" className="footer-link ">Certificates</Link>
                   </li>
                 </ul>
               </div>
@@ -163,6 +164,12 @@ const Footer = () => {
                             <span className="sr-only">GitHub account</span>
                         </Link>
 
+
+
+       
+
+
+ 
                  <Link to="#" className=  "footer-social-link    text-gray-500">
                             <svg
                                 className="footer-social-icon  w-4 h-4"
@@ -178,7 +185,8 @@ const Footer = () => {
                                 />
                             </svg>
                             <span className="sr-only">Dribbble account</span>
-                        </Link>     
+                        </Link>      
+
 
             </div>
 
