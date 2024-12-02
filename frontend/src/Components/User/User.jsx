@@ -44,7 +44,7 @@ const User = () => {
 
   return (
     <div className="user-container">
-      <h1 className="user-heading">Are you unauthorized?</h1>
+      <h1 className="user-heading">Are you Authorized?</h1>
       <form onSubmit={checkAdmin} className="user-form">
         <input
           type="text"
