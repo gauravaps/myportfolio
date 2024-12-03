@@ -76,8 +76,8 @@ const Header = () => {
               <img src={menu} alt="Menu" className="h-8 w-8" />
             </button>
 
-            <div className="auth-links flex items-center lg:order-2">
-              <label className="relative inline-flex items-center cursor-pointer">
+            <div className="auth-links  flex items-center lg:order-2">
+              <label className=" relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
                   value=""
