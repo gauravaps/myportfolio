@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import amazon from "../Header/amazon2.png";
+import menu from "../Header/menu.png";
 import "./index.css";
  
 const Header = () => {
   const [activeLink, setActiveLink] = useState("");
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
   const token = localStorage.getItem("token");
+
+
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -39,6 +42,13 @@ const Header = () => {
     localStorage.setItem("darkMode", newDarkMode);
   };
 
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev); // Toggle menu state
+  };
+
+
+
   return (
 
     
@@ -57,6 +67,14 @@ const Header = () => {
                 alt="Logo"
               />
             </Link>
+
+             {/* Hamburger Icon */}
+             <button
+              className="menu-toggle lg:hidden"
+              onClick={toggleMenu} 
+            >
+              <img src={menu} alt="Menu" className="h-8 w-8" />
+            </button>
 
             <div className="auth-links flex items-center lg:order-2">
               <label className="relative inline-flex items-center cursor-pointer">
@@ -79,8 +97,8 @@ const Header = () => {
                 <Link
                   to="/"
                   onClick={() => {
-                    localStorage.removeItem("token"); // Token clear karna
-                    window.location.reload(); // Page ko refresh karna taaki changes reflect ho
+                    localStorage.removeItem("token"); 
+                    window.location.reload(); 
                   }}
                   className="get-started-link text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                 >
@@ -96,8 +114,15 @@ const Header = () => {
               )}
             </div>
 
-            <div className="nav-menu flex justify-between items-center w-full lg:w-auto lg:order-1">
-              <ul className="menu-list flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+
+
+                       {/* Menu Links */}
+            <div
+              className={`nav-menu lg:flex ${
+                isMenuOpen ? "block" : "hidden"
+              } flex-col lg:flex-row lg:space-x-8`}
+            >
+              <ul className="menu-list flex flex-col mt-4 font-medium lg:flex-row lg:mt-0">
                 <li className="menu-item">
                   <NavLink
                     to="/"
@@ -109,7 +134,10 @@ const Header = () => {
                           : "text-gray-700"
                       } hover:text-orange-700 hover:scale-110 lg:p-0`
                     }
-                    onClick={() => setActiveLink("Home")}
+                    onClick={() => {
+                      setActiveLink("Home");
+                      setIsMenuOpen(false); // Close menu on click
+                    }}
                   >
                     Home
                   </NavLink>
@@ -126,7 +154,10 @@ const Header = () => {
                           : "text-gray-700"
                       } hover:text-orange-700 hover:scale-110 lg:p-0`
                     }
-                    onClick={() => setActiveLink("about")}
+                    onClick={() => {
+                      setActiveLink("about");
+                      setIsMenuOpen(false);
+                    }}
                   >
                     About
                   </NavLink>
@@ -143,7 +174,10 @@ const Header = () => {
                           : "text-gray-700"
                       } hover:text-orange-700 hover:scale-110 lg:p-0`
                     }
-                    onClick={() => setActiveLink("contact")}
+                    onClick={() => {
+                      setActiveLink("contact");
+                      setIsMenuOpen(false);
+                    }}
                   >
                     Contact Us
                   </NavLink>
@@ -160,9 +194,12 @@ const Header = () => {
                           : "text-gray-700"
                       } hover:text-orange-700 hover:scale-110 lg:p-0`
                     }
-                    onClick={() => setActiveLink("projects")}
+                    onClick={() => {
+                      setActiveLink("projects");
+                      setIsMenuOpen(false);
+                    }}
                   >
-                    projects
+                    Projects
                   </NavLink>
                 </li>
 
@@ -177,7 +214,10 @@ const Header = () => {
                           : "text-gray-700"
                       } hover:text-orange-700 hover:scale-110 lg:p-0`
                     }
-                    onClick={() => setActiveLink("course")}
+                    onClick={() => {
+                      setActiveLink("course");
+                      setIsMenuOpen(false);
+                    }}
                   >
                     Certificate
                   </NavLink>

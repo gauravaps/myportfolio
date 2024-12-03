@@ -82,23 +82,68 @@
 
 /* Dark Mode Styling */
 .dark-mode .menu-link {
-    color: #ffffff; /* Links ka color white ho jayega */
+    color: #ffffff; 
 }
 
-/* Hover Effect for Dark Mode */
+
 .dark-mode .menu-link:hover {
-    color: #f97316; /* Hover color (for example, orange) */
+    color: #f97316; 
     transform: scale(1.2);
 }
 
 .dark-mode .menu-link.text-orange-700 {
-    color: #f97316; /* Orange color for active link in dark mode */
+    color: #f97316; 
 }
 
 
+/* Menu List */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+@media (min-width: 1024px) {
+    .menu-list {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 20px;
+    }
+}
+
+/* Menu Links */
+.menu-link {
+    padding: 8px 12px; 
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode .menu-link.text-orange-700 {
+    color: #f97316; 
+}
+
+  
+
+
+/* Authentication Links: Buttons Styling */
+.auth-links .get-started-link {
+    margin-right: 8px;
+    padding: 8px 16px; 
+    border-radius: 4px;
+    font-size: 0.875rem;
+    display: inline-block; 
+    box-sizing: border-box; 
+}
+
+/* Small Screens: Consistent Button Height */
+@media (max-width: 262px) {
+    .auth-links .get-started-link {
+        padding: 6px 8px; 
+        font-size: 0.875rem; 
+        height: auto; 
+    }
+}
 
 
     
-
 
 
