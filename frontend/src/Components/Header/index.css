@@ -169,7 +169,45 @@
 
 
 
-@media (max-width: 285px) {
+@media (max-width: 385px) {
+    .logo-container {
+        margin-left: -25px; 
+    }
+
+    /* Auth Links (Get Started) */
+    .auth-links {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-end; 
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+    }
+
+    .auth-links .get-started-link {
+        margin: 25px 0px; 
+    }
+
+    /* Menu Toggle */
+    .menu-toggle {
+        display: flex;
+        align-items: center; 
+        justify-content: flex-start; 
+        margin-right: 14rem; 
+    }
+
+    /* Checkbox Mode */
+    .checkbox-mode {
+        margin-top: 10px;
+        
+        margin-right: 10px; 
+    }
+    
+}  
+
+
+
+@media (max-width: 302px) {
     .logo-container {
         margin-left: -25px; 
     }
@@ -203,7 +241,11 @@
         margin-right: 10px; 
     }
     
-}
+}  
+
+
+
+
 
     
 

@@ -125,3 +125,13 @@
   color: #1a73e8; 
   transform: scale(1.5);
 }
+
+
+@media (max-width: 385px){
+  .footer-social-link{
+    display: flex;
+  
+    justify-content:space-between ;
+    padding-left: 12px;
+  }
+}
