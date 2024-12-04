@@ -5,104 +5,81 @@ import './index.css';
 
 const Footer = () => {
   const [number, setNumber] = useState(1);
-
-  const currentyear = new Date();
-  const getYear =currentyear.getFullYear();
-  
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (number < 50) {
         setNumber(number + 1);
       }
-    }, 10); // Update every 10 milliseconds
+    }, 10);
 
     return () => {
-      clearInterval(interval); // Cleanup interval on component unmount
+      clearInterval(interval);
     };
-  });
+  }, [number]);
 
   return (
-    <div>
-      <footer className="footer bg-white border-y">
-        <div className="footer-container mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <div className="footer-content md:flex md:justify-between">
-            <div className="footer-logo mb-6 md:mb-0">
-              <Link to="/" className="flex items-center">
-                <img
-                  // src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                  src={amazon}
-                  className="footer-logo-image mr-3 h-16"
-                  alt="Logo"
-                />
-              </Link>
-            </div>
-
-            <div className='footer-statistics project'>
-              <h1 className="statistics-title">Clients</h1>
-              <h1 className="statistics-number">{number} +</h1>
-            </div>
-
-            <div className='footer-statistics project'>
-              <h1 className="statistics-title">Projects</h1>
-              <h1 className="statistics-number">{number} +</h1>
-            </div>
-
-            <div className="footer-links grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div className="footer-section">
-                <h2 className="footer-section-title mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
-                <ul className="footer-section-list text-grey-600 font-medium">
-
-                 
-                  <li>
-                    <Link to="/projects" className="footer-link ">projects</Link>
-                  </li>
-                  <li>
-                    <Link to="/certificates" className="footer-link ">Certificates</Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer-section">
-                <h2 className="footer-section-title mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
-                <ul className="footer-section-list text-gray-500 font-medium">
-                  <li className="footer-section-item mb-4">
-                    <a
-                      href="https://github.com/gauravaps"
-                      className="footer-link "
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Github
-                    </a>
-                  </li>
-                  <li>
-                    <Link to="/" className="footer-link ">Discord</Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer-section">
-                <h2 className="footer-section-title mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
-                <ul className="footer-section-list text-gray-500 font-medium">
-                  <li className="footer-section-item mb-4">
-                    <Link to="#" className="footer-link ">Privacy Policy</Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="footer-link ">Terms &amp; Conditions</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <footer className="footer bg-white border-y">
+      <div className="footer-container mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        {/* Flex container for alignment */}
+        <div className="footer-content flex flex-wrap items-center justify-between">
+          {/* Logo */}
+          <div className="footer-logo">
+            <Link to="/" className="flex items-center">
+              <img
+                src={amazon}
+                className="footer-logo-image h-16"
+                alt="Logo"
+              />
+            </Link>
           </div>
-          <hr className="footer-divider my-6 border-gray-400 sm:mx-auto lg:my-8" />
+
+          {/* Projects */}
+          <div className="footer-statistics project text-center flex-grow">
+            <h1 className="statistics-title text-sm font-semibold uppercase">Projects</h1>
+            <h1 className="statistics-number text-lg font-bold">{number}+</h1>
+          </div>
+
+          {/* Resources */}
+          <div className="footer-section flex-grow text-center">
+            <h2 className="footer-section-title text-sm font-semibold uppercase">Resources</h2>
+            <ul className="footer-section-list">
+              <li><Link to="/projects" className="footer-link">Projects</Link></li>
+              <li><Link to="/certificates" className="footer-link">Certificates</Link></li>
+            </ul>
+          </div>
+
+          {/* Follow Us */}
+          <div className="footer-section flex-grow text-center">
+            <h2 className="footer-section-title text-sm font-semibold uppercase">Follow Us</h2>
+            <ul className="footer-section-list">
+              <li><a href="https://github.com/gauravaps" target="_blank" rel="noreferrer" className="footer-link">Github</a></li>
+              <li><Link to="/" className="footer-link">Discord</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div className="footer-section flex-grow text-center">
+            <h2 className="footer-section-title text-sm font-semibold uppercase">Legal</h2>
+            <ul className="footer-section-list">
+              <li><Link to="#" className="footer-link">Privacy Policy</Link></li>
+              <li><Link to="#" className="footer-link">Terms &amp; Conditions</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <hr className="footer-divider my-6 border-gray-400 sm:mx-auto lg:my-8" />
           <div className="footer-bottom sm:flex sm:items-center sm:justify-between">
             <span className="footer-copy  text-sm sm:text-center">
-              © {getYear}
+              © {currentYear}
               <a href="https://github.com/gauravaps" className="footer-link m-1">gauravgitHub.com</a>
               . All Rights Reserved.
             </span>
             
             <div className="footer-social flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-              <Link to="#" className="footer-social-link text-gray-500 ">
+              <Link to="https://www.facebook.com/login/" className="footer-social-link text-gray-500 ">
                 <svg
                   className="footer-social-icon w-4 h-4"
                   aria-hidden="true"
@@ -130,7 +107,7 @@ const Footer = () => {
                 </svg>
                 <span className="sr-only">Discord community</span>
               </Link>
-              <Link to="#" className="footer-social-link text-gray-500">
+              <Link to="https://x.com/Gauravaps" className="footer-social-link text-gray-500">
                 <svg
                   className="footer-social-icon w-4 h-4"
                   aria-hidden="true"
@@ -147,7 +124,7 @@ const Footer = () => {
                 <span className="sr-only">Twitter page</span>
               </Link>
 
-              <Link to="#" className= "footer-social-link  text-gray-500">
+              <Link to="https://github.com/gauravaps" className= "footer-social-link  text-gray-500">
                             <svg
                                 className="footer-social-icon  w-4 h-4"
                                 aria-hidden="true"
@@ -167,10 +144,10 @@ const Footer = () => {
 
 
        
-
+ 
 
  
-                 <Link to="#" className=  "footer-social-link    text-gray-500">
+                 {/* <Link to="#" className=  "footer-social-link    text-gray-500">
                             <svg
                                 className="footer-social-icon  w-4 h-4"
                                 aria-hidden="true"
@@ -185,7 +162,22 @@ const Footer = () => {
                                 />
                             </svg>
                             <span className="sr-only">Dribbble account</span>
-                        </Link>      
+                        </Link>   */}
+
+
+
+    <Link to="https://www.linkedin.com/in/gauravaps/" className="footers-social-link text-gray-500">
+  <svg
+    className="footers-social-icon w-4 h-4 mb-6 mr-1"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path d="M4.983 3.25a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0ZM0 6.636h4.854v12.727H0V6.636ZM7.318 6.636h4.655v1.747h.066c.647-1.222 2.229-2.488 4.584-2.488 4.9 0 5.8 3.224 5.8 7.417v8.05H17.87v-7.134c0-1.704-.032-3.897-2.374-3.897-2.374 0-2.739 1.854-2.739 3.768v7.263H7.318V6.636Z" />
+  </svg>
+  <span className="sr-only">LinkedIn page</span>
+</Link>     
 
 
             </div>
@@ -193,7 +185,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    
   );
 };
 

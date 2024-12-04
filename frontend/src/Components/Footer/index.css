@@ -1,6 +1,6 @@
 
    /* Hover effect for Footer Links */
-   .footer-link {
+   /* .footer-link {
     color: #555;
     display: inline-block; 
     transition: color 0.3s ease, transform 0.2s ease;
@@ -59,4 +59,69 @@
 
 .statistics-title, .statistics-number {
   line-height: 1.5; 
+} */
+
+
+
+.footer {
+  background-color: #f9f9f9;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo-image {
+  max-height: 60px;
+}
+
+.footer-content > div {
+  flex: 1; /* Ensure equal space */
+  min-width: 120px; /* Prevent items from shrinking too much */
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section-title {
+  color: white;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.footer-section-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  color: #555;
+  display: inline-block; 
+  transition: color 0.3s ease, transform 0.2s ease;
+  color: var(--text-color);
+}
+
+.footer-link:hover {
+  color: #1a73e8; 
+  transform: scale(1.2); 
+}
+
+
+.footer-social-link  {
+  color: #555;
+  transition: color 0.3s ease, transform 0.2s ease;
+  color: var(--text-color);
+}
+
+
+.footer-copy span{
+  color: var(--text-color);
+}
+
+
+.footer-social-link:hover {
+  color: #1a73e8; 
+  transform: scale(1.5);
 }
