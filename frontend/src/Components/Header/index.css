@@ -209,7 +209,7 @@
 
 @media (max-width: 302px) {
     .logo-container {
-        margin-left: -25px; 
+        margin-left: -15px; 
     }
 
     /* Auth Links (Get Started) */
@@ -231,7 +231,7 @@
         display: flex;
         align-items: center; 
         justify-content: flex-start; 
-        margin-right: 9rem; 
+        margin-right: 11rem; 
     }
 
     /* Checkbox Mode */
@@ -245,7 +245,20 @@
 
 
 
+@media (min-width: 303px) and (max-width: 385px) {
+    .logo-container {
+        margin-left: 0px; 
+    }
 
+     /* Menu Toggle */
+     .menu-toggle {
+        display:flex;
+        align-items: center; 
+        justify-content: flex-start; 
+        margin-right: 14rem; 
+          /* margin-left: 1rem;    */
+    }
+}
 
     
 
