@@ -91,6 +91,18 @@ const Sdata=[
         title:"Facebook clone",
     },
 
+    {   
+        _id: "15",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1743061087/SQL_Practice_Queries_wflezt.png",
+        title:"SQL practice Queries",
+    },
+
+    {   
+        _id: "16",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1743061064/sql_at_work_oemfqz.png",
+        title:"SQL at work ",
+    },
+
     
 
 

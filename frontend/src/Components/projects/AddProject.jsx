@@ -13,6 +13,7 @@ const AddProject = () => {
   const [sourceCode, setSourceCode] = useState('');
   const [loading ,setloading] = useState(false)
   const token = localStorage.getItem("token");
+  console.log(`${import.meta.env.VITE_PORT}`)
   
   
   const handleImageChange = (e) => {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import amazon from "../Header/amazon2.png";
+import logo2 from "../Footer/logo2.webp"
 import './index.css';
 
 const Footer = () => {
@@ -28,7 +29,7 @@ const Footer = () => {
           <div className="footer-logo">
             <Link to="/" className="flex items-center">
               <img
-                src={amazon}
+                src={logo2}
                 className="footer-logo-image h-16"
                 alt="Logo"
               />

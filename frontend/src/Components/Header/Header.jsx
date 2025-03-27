@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import amazon from "../Header/amazon2.png";
 import menu from "../Header/menu.png";
+import logo1 from "../Header/logo1.webp"
+import logo2 from "../Header/logo2.webp"
+import logo3 from "../Header/logo3.webp"
+import logo4 from "../Header/logo4.png"
 import "./index.css";
  
 const Header = () => {
@@ -11,7 +15,7 @@ const Header = () => {
   const location = useLocation();
   const token = localStorage.getItem("token");
 
-
+ 
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -62,10 +66,10 @@ const Header = () => {
               onClick={() => setActiveLink("Home")}
             >
               <img
-                src={amazon}
+                src={logo2}
                 className="logo mr-3 h-14 hover:scale-110"
                 alt="Logo"
-              />
+              /> 
             </Link>
 
              {/* Hamburger Icon */}
