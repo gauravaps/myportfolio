@@ -127,14 +127,14 @@ const Contactus = () => {
                                     />
                                 </svg>
                                 <div className="details  ml-4 text-md tracking-wide font-semibold w-40">
-                                    +91 8109107318
+                                    +91 8319271749
                                 </div>
                                 </a>
                             </div>
 
                             <div className="flex items-center mt-2 text-gray-600">
                                      <a
-                                 href="mailto:Gauravpateltrs@gmail.com"
+                                 href="mailto:Gauravchotu58@gmail.com"
                                     className="flex items-center text-gray-600"
                                  >
 
@@ -155,7 +155,7 @@ const Contactus = () => {
                                     />
                                 </svg>
                                 <div className="details  ml-4 text-md tracking-wide font-semibold w-40">
-                                    Gauravpateltrs@gmail.com
+                                    Gauravchotu58@gmail.com
                                 </div>
                                 </a>
                             </div>
