@@ -181,3 +181,50 @@
 }
 
 
+
+/* .left-side-links button css */
+
+.left-side-links {
+  margin-top: 40px; /* ✅ FooterIcons se aur gap */
+  text-align: center;
+}
+
+.left-side-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-side-links li {
+  margin: 12px 0;
+}
+
+.left-side-links a {
+  display: inline-block;
+  width: 250px;              /* ✅ Width badha di */
+  height: 50px;              /* ✅ Height badha di */
+  line-height: 50px;         /* ✅ Center vertical text */
+  background-color: black;
+  color: white;
+  border: 2px solid white;   /* ✅ White border added */
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.left-side-links a:hover {
+  background-color: #f97316; /* ✅ Orange on hover */
+  color: white;
+  border-color: #f97316;
+}
+
+
+@media (max-width: 500px) {
+  .left-side-links a {
+    width: 100%;
+    max-width: 300px;
+    font-size: 14px;
+  }
+}
+

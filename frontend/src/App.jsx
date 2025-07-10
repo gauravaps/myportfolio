@@ -15,7 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import { LoggedInRoutes } from './routes/LoggedInRoutes ';
 import NotLoggedInRoutes from './routes/NotLoggedInRoutes';
 import AddCertificate from './Components/Course/AddCertificate';
- 
+  
       
 function App() {
   return (

@@ -69,6 +69,15 @@ const About = () => {
       I specialize in creating small-scale   websites, including static, dynamic, and <span className="highlight" >  MERN stack applications, </span>
       tailored for your shop,
         business promotion, or personal needs. Connect with me to bring your ideas to life!"
+
+        <br />
+          Whether you need a fast-loading landing page, a responsive e-commerce
+          front, or a dynamic admin panel, I can build it using modern
+          technologies. Every website I create is optimized for performance,
+          mobile responsiveness, and clean UI/UX design. I also ensure
+          SEO-friendly structure, so your site performs well in search engines.
+          Let's collaborate and turn your concept into a fully functional
+          website that adds real value to your brand or business!
         </p>
 
       <NavLink
