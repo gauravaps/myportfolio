@@ -103,6 +103,43 @@ const Sdata=[
         title:"SQL at work ",
     },
 
+    {   
+        _id: "17",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1752863300/certificate/Intermediate%20SQL%20Datacamp.jpg",
+        title:"Intermediate SQL Datacamp",
+    },
+
+    {   
+        _id: "18",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1752863580/certificate/Introduction%20SQL%20Datacamp.jpg",
+        title:"Introduction SQL Datacamp",
+    },
+
+    {   
+        _id: "19",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1752863772/certificate/Understanding%20Data%20engineering.jpg",
+        title:"Understanding Data engineering",
+    },
+
+    {   
+        _id: "20",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1752863988/certificate/certificate%20sql%20join.jpg",
+        title:"certificate sql join",
+    },
+
+    {   
+        _id: "21",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1752864123/certificate/real_swan_83-500_to_1000_difficulty_rating_qbuws1.jpg",
+        title:"Javascript difficulty rating",
+    },
+
+    
+    {   
+        _id: "22",
+        imgscr:"https://res.cloudinary.com/gauravkacloud/image/upload/v1752864256/certificate/real_swan_83-Learn_React_JS_for_Front-end_development_fk42dx.jpg",
+        title:"Learn React.Js",
+    },
+
     
 
 
