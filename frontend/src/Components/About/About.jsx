@@ -53,14 +53,15 @@ const About = () => {
     className="about-image sticky-image"
   />
   <FooterSocialsIcons />
+
+
 </div>
          
         </div>
 
-        
+         
      </div>
 
-     
 
       <h4 className="footer-heading text-center  py-10 ">
 

@@ -148,7 +148,7 @@ const Home = () => {
         </p>
 
         <h4 className="footer-heading text-left  py-10 ">
-          <NavLink to="/about" className="know-more-button ">
+          <NavLink to="/about" className="know-more-button ">  
             &nbsp; Know me more!
           </NavLink>
         </h4>

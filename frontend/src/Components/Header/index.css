@@ -174,7 +174,6 @@
         margin-left: -25px; 
     }
 
-    /* Auth Links (Get Started) */
     .auth-links {
         display: flex;
         flex-direction: column; 
@@ -185,10 +184,16 @@
     }
 
     .auth-links .get-started-link {
-        margin: 25px 0px; 
+        /* margin: 25px 0px;  */
+        margin: 0;
+        width: auto;
+        height: 30px;
+        padding-top: 5px;
+        
     }
 
-    /* Menu Toggle */
+ 
+
     .menu-toggle {
         display: flex;
         align-items: center; 
@@ -196,14 +201,14 @@
         margin-right: 14rem; 
     }
 
-    /* Checkbox Mode */
     .checkbox-mode {
         margin-top: 10px;
         
         margin-right: 10px; 
     }
     
-}  
+}   
+    
 
 
 
@@ -261,4 +266,15 @@
 }
 
     
+
+
+
+/* new css */ 
+
+.auth-links {
+  gap: 10px; /* ✅ Gives space between toggle & button */
+}
+
+
+
 
